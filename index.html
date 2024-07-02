@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Stage One Task</title>
+   <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <main>
+      <header>
+         <h1>HNG 11 STAGE ONE TASK</h1><hr>
+         <p>As a passionate tech enthusiast and aspiring software engineer. Over the next two years, 
+            I have set a series of ambitious goals to advance my career, enhance my skills, and contribute to exciting projects in the tech industry. 
+            This website serves as a roadmap for my journey, outlining my objectives.</p>
+      </header><br>
+      <section id="slackInfo">
+         <img data-testid="slackProfilePicture" src="images/Profile_picture.jpg" alt="My Slack Profile Picture">
+         <div id="details">
+            <h1 data-testid="slackDisplayName">Marv_lous</h1>
+            <p data-testid="currentTimeUTC"></p>
+            <p data-testid="currentDay"></p>
+            <p data-testid="slackEmail">marveldoc17@gmail.com</p>
+         </div>
+      </section><br>
+      <section id="goals">
+         <h2>MY GOALS FOR THE NEXT TWO YEARS IN TECH:</h2>
+         <ul>
+            <li>Master JavaScript Frameworks and Gain Mastery in Frontend Development</li>
+            <li>Learn Backend Development</li>
+            <li>Attend Web Development Conferences and Join Web Development Communities</li>
+            <li>Become a Professional Web Developer</li>
+         </ul>
+      </section><br>
+      <footer>
+         <p>Explore <a data-testid="hngLink" href="http://hng.tech/learn">hng.tech/learn</a>  to expand your knowledge, in courtesy of my internship program with HNG 11. If you're interested, check out these other links, 
+         <a data-testid="keywordLink" href="http://keyword.dog/">keyword.dog</a> and <a data-testid="scrapeanywebLink" href="http://scrapeanyweb.site/">scrapeanyweb.site</a></p>
+      </footer>
+   </main>
+
+   
+<script>
+   function getCurrentUTCTime() {
+      const now = new Date();
+      const hours = now.getUTCHours();
+      const minutes = now.getUTCMinutes();
+      const seconds = now.getUTCSeconds();
+
+      const formattedTime = `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+
+      return formattedTime;
+   }
+
+   function displayCurrentUTCTime() {
+      const timeElement = document.querySelector('[data-testid="currentTimeUTC"]');
+      timeElement.textContent = getCurrentUTCTime();
+   }
+
+   setInterval(displayCurrentUTCTime, 1000);
+
+   displayCurrentUTCTime();
+
+
+   function getCurrentDay() {
+      const now = new Date();
+      const daysOfWeek = [
+      "Sunday",
+      "Monday",
+      "Tuesday",
+      "Wednesday", 
+      "Thursday", 
+      "Friday", 
+      "Saturday"
+      ];
+      const currentDay = daysOfWeek[now.getUTCDay()];
+      return currentDay;
+   }
+
+   function displayCurrentDay() {
+      const dayElement = document.querySelector('[data-testid="currentDay"]');
+      dayElement.textContent = getCurrentDay();
+   }
+
+   setInterval(displayCurrentDay, 1000);
+
+   displayCurrentDay();
+
+</script>
+
+
+</body>
+</html>

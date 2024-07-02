@@ -1,0 +1,49 @@
+* {
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+    color: #fff;
+}
+body{
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000;
+    background: linear-gradient(rgba(0, 0, 0, .6),rgba(0, 0, 0, .6)), url("images/g5.jpg");
+    background-size: cover;
+    position: relative;
+}
+main{
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    padding: 1% 4%;
+    margin: 2% 20%;
+    border-radius: 2%;
+    background: linear-gradient(rgba(0, 0, 0, .9),rgba(0, 0, 0, .9));
+}
+header, footer{
+    text-align: center;
+}
+#slackInfo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10%;
+}
+#details{
+    white-space: nowrap;
+    text-align: center;
+}
+a:hover{
+    opacity: 0.5;
+}
+
+@media (max-width: 800px){
+    main{
+        margin: 4% 10%;
+    }
+    #slackInfo{
+        flex-direction: column;
+    }
+}
